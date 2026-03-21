@@ -30,7 +30,7 @@ class Visualization:
         plt.figure(figsize=(8, 5))
         self.df[:10].plot(x=x, y=y, kind='bar')
         plt.title('Bar Graph (Top 10)', fontsize=16, fontweight='bold')
-        plt.xticks(rotation=30)
+        plt.xticks(rotation=90)
         return self._save_fig()
 
     
