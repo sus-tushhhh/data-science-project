@@ -41,4 +41,4 @@ https://datalens-sus-tushhhh.streamlit.app/
 
 ## 👨‍💻 Developer
 
-Built by Prince(https://github.com/Prince-Gulia) & Tushant
+Built by [Prince](https://github.com/Prince-Gulia) & Tushant
