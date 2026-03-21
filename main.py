@@ -212,15 +212,21 @@ numeric_cols = df.select_dtypes(include=["number"]).columns.tolist()
 
 chart_type = st.selectbox(
     "Select Chart Type",
-    ["Bar", "Scatter", "Line", "Pie", "Box", "Heatmap"],
+    ["Vertical Bar", "Horizontal Bar", "Scatter", "Line", "Pie", "Box", "Heatmap"],
     key="chart_type"
 )
 
-if chart_type == "Bar":
+if chart_type == "Vertical Bar":
     x = st.selectbox("X axis", df.columns, key="bar_x")
     y = st.multiselect("Y axis", numeric_cols, key="bar_y")
     if y:
         st.image(viz.bar_graph(x, y), width='content')
+
+elif chart_type == "Horizontal Bar":
+    x = st.selectbox("X axis", df.columns, key="bar_x")
+    y = st.multiselect("Y axis", numeric_cols, key="bar_y")
+    if y:
+        st.image(viz.bar_graph(x, y, kind='barh'), width='content')
 
 elif chart_type == "Scatter":
     x = st.selectbox("X axis", numeric_cols, key="sc_x")

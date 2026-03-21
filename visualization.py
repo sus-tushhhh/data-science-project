@@ -26,9 +26,9 @@ class Visualization:
         return img
 
     
-    def bar_graph(self, x: str, y: list[str]):
+    def bar_graph(self, x: str, y: list[str], kind = 'bar'):
         plt.figure(figsize=(8, 5))
-        self.df[:10].plot(x=x, y=y, kind='bar')
+        self.df[:10].plot(x=x, y=y, kind=kind)
         plt.title('Bar Graph (Top 10)', fontsize=16, fontweight='bold')
         plt.xticks(rotation=90)
         return self._save_fig()
