@@ -21,7 +21,6 @@ class Visualization:
         plt.savefig(buffer)
         buffer.seek(0)
         img = Image.open(buffer)
-        img.resize((600, 600))
         plt.close()
 
         return img
@@ -29,8 +28,8 @@ class Visualization:
     
     def bar_graph(self, x: str, y: list[str]):
         plt.figure(figsize=(8, 5))
-        self.df.plot(x=x, y=y, kind='bar')
-        plt.title('Bar Graph', fontsize=16, fontweight='bold')
+        self.df[:10].plot(x=x, y=y, kind='bar')
+        plt.title('Bar Graph (Top 10)', fontsize=16, fontweight='bold')
         plt.xticks(rotation=30)
         return self._save_fig()
 
@@ -38,22 +37,22 @@ class Visualization:
     def scatter_plot(self, x: str, y: list[str]):
         plt.figure(figsize=(8, 5))
 
-        ax = self.df.plot.scatter(x=x, y=y[0], color=self.random_color(), label=y[0])
+        ax = self.df[:10].plot.scatter(x=x, y=y[0], color=self.random_color(), label=y[0])
         for col in y[1:]:
-            self.df.plot.scatter(x=x, y=col, ax=ax, color=self.random_color(), label=col)
+            self.df[:10].plot.scatter(x=x, y=col, ax=ax, color=self.random_color(), label=col)
 
-        plt.title('Scatter Plot', fontsize=16, fontweight='bold')
+        plt.title('Scatter Plot (Top 10)', fontsize=16, fontweight='bold')
         return self._save_fig()
 
     
     def line_plot(self, x: str, y: list[str]):
         plt.figure(figsize=(8, 5))
 
-        ax = self.df.plot(x=x, y=y[0], color=self.random_color(), label=y[0])
+        ax = self.df[:10].plot(x=x, y=y[0], color=self.random_color(), label=y[0])
         for col in y[1:]:
-            self.df.plot(x=x, y=col, ax=ax, color=self.random_color(), label=col)
+            self.df[:10].plot(x=x, y=col, ax=ax, color=self.random_color(), label=col)
 
-        plt.title('Line Plot', fontsize=16, fontweight='bold')
+        plt.title('Line Plot (Top 10)', fontsize=16, fontweight='bold')
         return self._save_fig()
 
     
