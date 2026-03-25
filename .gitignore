@@ -1,2 +1,2 @@
-/__pychache__
-/devcontainer
+devcontainer/
+__pycache__/
