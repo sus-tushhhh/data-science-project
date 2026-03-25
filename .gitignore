@@ -1,4 +1,2 @@
-__pychache__
-.devcontainer
-.vscode
-.idea
+/__pychache__
+/devcontainer
