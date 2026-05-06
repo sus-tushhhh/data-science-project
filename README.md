@@ -6,21 +6,21 @@ DataLens is an intelligent web app built with Streamlit that allows users to upl
 
 ## 🚀 Features
 
-* 📂 Upload CSV / Excel datasets
-* 🧠 Automatic data cleaning (smart detection)
-* 🔢 Convert messy columns to numeric
-* ⚠️ Missing value detection & handling
-* 📊 Data visualization (bar, scatter, heatmap, etc.)
-* 📈 Column statistics & insights
+- 📂 Upload CSV / Excel datasets
+- 🧠 Automatic data cleaning (smart detection)
+- 🔢 Convert messy columns to numeric
+- ⚠️ Missing value detection & handling
+- 📊 Data visualization (bar, scatter, heatmap, etc.)
+- 📈 Column statistics & insights
 
 ---
 
 ## 🛠️ Tech Stack
 
-* Python
-* Pandas, NumPy
-* Streamlit
-* Matplotlib, Seaborn
+- Python
+- Pandas, NumPy
+- Streamlit
+- Matplotlib, Seaborn
 
 ---
 
@@ -41,4 +41,4 @@ https://datalens-sus-tushhhh.streamlit.app/
 
 ## 👨‍💻 Developer
 
-Built by [Prince](https://github.com/Prince-Gulia) & [Tushant](https://github.com/sus-tushhhh)
+Built by [Tushant](https://github.com/sus-tushhhh) & [Prince](https://github.com/Prince-Gulia)
